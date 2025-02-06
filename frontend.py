@@ -83,7 +83,7 @@ data = {
 }
 
 if st.button("Predict Cancellation"):
-    response = requests.post("http://127.0.0.1:5000/predict", json=data)
+    response = requests.post("https://hotelgenius-3.onrender.com/predict", json=data)
     
     if response.status_code == 200:
         prediction = response.json().get("prediction", "Error: No prediction received")
